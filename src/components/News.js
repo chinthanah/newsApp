@@ -12,6 +12,7 @@ export class News extends Component {
               title="mytitle"
               description="mydesc"
               imageUrl="https://www.aljazeera.com/wp-content/uploads/2023/09/33V82NE-highres-1694809059.jpg"
+              newsUrl="TODO"
             />
           </div>
           <div className="col-md-4">
