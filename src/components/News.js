@@ -63,7 +63,18 @@ export class News extends Component {
       loading: false,
     };
   }
+
+  async componentDidMount() {
+    let url =
+      "https://newsapi.org/v2/top-headlines?country=in&apiKey=7722231d02234b0ab37ed6574ce60572";
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    console.log(parsedData);
+    this.setState({ articles: parsedData.articles });
+  }
+
   render() {
+    console.log("render");
     return (
       <div className="container my-3">
         <h2>NEWS Top Headlines</h2>
