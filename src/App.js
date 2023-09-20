@@ -5,6 +5,7 @@ import News from "./components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default class App extends Component {
+  pageSize = 10;
   render() {
     return (
       <div>
@@ -83,7 +84,7 @@ export default class App extends Component {
               element={
                 <News
                   key="technology"
-                  pageSize={10}
+                  pageSize={this.pageSize}
                   country="in"
                   category="technology"
                 />
